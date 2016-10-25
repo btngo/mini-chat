@@ -1,0 +1,19 @@
+{
+  "name": "Tchat",
+  "version": "0.1.0",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "express": "~3.3.4",
+    "mongoose": "^4.6.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^1.5.1"
+  },
+  "author": "BaTuan <batuan.ngo@gmail.com>",
+  "description": "TChat with mongodb and socket.io",
+  "scripts": {
+    "postinstall": "bower install",
+    "initMongo": "node initMongo.js",
+    "start": "node backend/app.js"
+  }
+}

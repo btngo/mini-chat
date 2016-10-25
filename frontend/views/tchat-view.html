@@ -1,0 +1,18 @@
+<div class="panel panel-default col-md-9 container">
+    <form id="formulaire_chat" ng-submit="chatCtrl.sendMessage()">
+        <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus ng-model="chatCtrl.message"/>
+        <input type="submit" id="envoi_message" value="Envoyer" />
+    </form>
+
+    <section id="zone_chat">
+        <p ng-repeat="chatItem in chatCtrl.messageList ">
+            <strong>{{chatItem.sender}}:</strong>   {{chatItem.message}}
+        </p>
+    </section>
+</div>
+<div class="panel panel-default col-md-3 container">
+    Connected Users
+    <p ng-repeat="user in chatCtrl.userList ">
+        <strong>{{user}}</strong>
+    </p>
+</div>
